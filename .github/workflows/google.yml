@@ -17,7 +17,7 @@ jobs:
         id: gcp_auth_us_east4  # Give a unique ID for this step
         uses: google-github-actions/auth@v0.5.0
         with:
-          credentials_json: ${{ secrets.GCP_SA_KEY }}
+          credentials_json: ${{ GROUP_TASK }}
       
       - name: Set GCP Project ID for GKE in us-east4
         run: gcloud config set project nifty-altar-394805
@@ -42,7 +42,7 @@ jobs:
         id: gcp_auth_europe_north1  # Give a unique ID for this step
         uses: google-github-actions/auth@v0.5.0
         with:
-          credentials_json: ${{ secrets.GCP_SA_KEY }}
+          credentials_json: ${{ GROUP_TASK }}
       
       - name: Set GCP Project ID for GKE in europe-north1
         run: gcloud config set project nifty-altar-394805
@@ -66,7 +66,7 @@ jobs:
         id: gcp_auth_us_central1  # Give a unique ID for this step
         uses: google-github-actions/auth@v0.5.0
         with:
-          credentials_json: ${{ secrets.GCP_SA_KEY }}
+          credentials_json: ${{ GROUP_TASK }}
       
       - name: Set GCP Project ID for GKE in us-central1
         run: gcloud config set project nifty-altar-394805
