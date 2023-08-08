@@ -75,4 +75,4 @@ jobs:
         run: gcloud container clusters get-credentials cluster-dr --zone us-central1
 
       - name: Deploy to GKE in us-central1
-        run: kubectl apply -f vuejs-deployment.yam
+        run: kubectl apply -f vuejs-deployment.yaml
