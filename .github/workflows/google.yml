@@ -7,7 +7,7 @@ on:
 
 jobs:
   deploy_gke_us_east4:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
 
     steps:
       - name: Checkout
@@ -30,7 +30,7 @@ jobs:
 
   deploy_gke_europe_north1:
     environment: 'env'  # This line was moved here, and the syntax was corrected.
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
 
     needs: deploy_gke_us_east4  # Wait for the 'deploy_gke_us_east4' job to finish successfully before starting this job.
 
@@ -54,7 +54,7 @@ jobs:
         run: kubectl apply -f vuejs-deployment.yaml
 
   deploy_gke_us_central1:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
 
     needs: deploy_gke_europe_north1  # Wait for the 'deploy_gke_europe_north1' job to finish successfully before starting this job.
 
