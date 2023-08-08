@@ -20,7 +20,7 @@ jobs:
           credentials_json: ${{ GROUP_TASK }}
       
       - name: Set GCP Project ID for GKE in us-east4
-        run: gcloud config set project nifty-altar-394805
+        run: gcloud config set project nice-stack-354208
       
       - name: Set GKE Cluster in us-east4
         run: gcloud container clusters get-credentials cluster-dev --zone us-east4
@@ -45,7 +45,7 @@ jobs:
           credentials_json: ${{ GROUP_TASK }}
       
       - name: Set GCP Project ID for GKE in europe-north1
-        run: gcloud config set project nifty-altar-394805
+        run: gcloud config set project nice-stack-354208
       
       - name: Set GKE Cluster in europe-north1
         run: gcloud container clusters get-credentials cluster-prod --zone europe-north1
@@ -69,7 +69,7 @@ jobs:
           credentials_json: ${{ GROUP_TASK }}
       
       - name: Set GCP Project ID for GKE in us-central1
-        run: gcloud config set project nifty-altar-394805
+        run: gcloud config set project nice-stack-354208
       
       - name: Set GKE Cluster in us-central1
         run: gcloud container clusters get-credentials cluster-dr --zone us-central1
